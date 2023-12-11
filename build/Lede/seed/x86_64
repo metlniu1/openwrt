@@ -1,6 +1,10 @@
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_DEVICE_generic=y
+CONFIG_ARIA2_BITTORRENT=y
+CONFIG_ARIA2_NOXML=y
+CONFIG_ARIA2_OPENSSL=y
+CONFIG_ARIA2_WEBSOCKET=y
 # CONFIG_GRUB_EFI_IMAGES is not set
 CONFIG_GRUB_IMAGES=y
 CONFIG_ISO_IMAGES=y
@@ -12,6 +16,8 @@ CONFIG_PACKAGE_TAR_ZSTD=y
 # CONFIG_PACKAGE_adbyby is not set
 CONFIG_PACKAGE_aliyundrive-fuse=y
 CONFIG_PACKAGE_aliyundrive-webdav=y
+CONFIG_PACKAGE_aria2=y
+CONFIG_PACKAGE_ariang=y
 CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_blkid is not set
 CONFIG_PACKAGE_boost=y
@@ -67,6 +73,7 @@ CONFIG_PACKAGE_kmod-md-mod=y
 CONFIG_PACKAGE_kmod-md-raid0=y
 CONFIG_PACKAGE_kmod-md-raid1=y
 CONFIG_PACKAGE_kmod-md-raid10=y
+CONFIG_PACKAGE_kmod-netlink-diag=y
 CONFIG_PACKAGE_kmod-nf-log6=y
 CONFIG_PACKAGE_kmod-nf-reject6=y
 CONFIG_PACKAGE_kmod-nf-socket=y
@@ -77,6 +84,7 @@ CONFIG_PACKAGE_kmod-nft-tproxy=y
 CONFIG_PACKAGE_kmod-sched-connmark=y
 CONFIG_PACKAGE_kmod-sched-core=y
 # CONFIG_PACKAGE_kmod-wireguard is not set
+CONFIG_PACKAGE_libaio=y
 CONFIG_PACKAGE_libbz2=y
 CONFIG_PACKAGE_libcap-bin=y
 CONFIG_PACKAGE_libcap-bin-capsh-shell="/bin/sh"
@@ -106,6 +114,7 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-advanced=y
 CONFIG_PACKAGE_luci-app-advanced-reboot=y
 CONFIG_PACKAGE_luci-app-argon-config=y
+CONFIG_PACKAGE_luci-app-aria2=y
 # CONFIG_PACKAGE_luci-app-arpbind is not set
 # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Server is not set
@@ -122,13 +131,16 @@ CONFIG_PACKAGE_luci-app-chatgpt-web=y
 CONFIG_PACKAGE_luci-app-mosdns=y
 CONFIG_PACKAGE_luci-app-mwan3=y
 CONFIG_PACKAGE_luci-app-nps=y
+CONFIG_PACKAGE_luci-app-passwall=y
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall2_Iptables_Transparent_Proxy=y
+CONFIG_PACKAGE_luci-app-passwall_Iptables_Transparent_Proxy=y
 CONFIG_PACKAGE_luci-app-poweroff=y
 CONFIG_PACKAGE_luci-app-pushbot=y
 # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
 # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadow_TLS=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin=y
@@ -142,22 +154,19 @@ CONFIG_PACKAGE_luci-app-syncdial=y
 # CONFIG_PACKAGE_luci-app-upnp is not set
 CONFIG_PACKAGE_luci-app-uugamebooster=y
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Hysteria is not set
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server is not set
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan is not set
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray is not set
-# CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
 # CONFIG_PACKAGE_luci-app-webd_INCLUDE_WEBD_BINARY is not set
 # CONFIG_PACKAGE_luci-app-wireguard is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
 # CONFIG_PACKAGE_luci-app-zerotier is not set
-CONFIG_PACKAGE_luci-compat=y
 CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-chatgpt-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-passwall2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-poweroff-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ssrserver-python-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
@@ -167,7 +176,6 @@ CONFIG_PACKAGE_luci-lib-xterm=y
 CONFIG_PACKAGE_luci-theme-design=y
 CONFIG_PACKAGE_mdadm=y
 # CONFIG_PACKAGE_miniupnpd is not set
-CONFIG_PACKAGE_mosdns=y
 CONFIG_PACKAGE_mwan3=y
 CONFIG_PACKAGE_netdata=y
 CONFIG_PACKAGE_nftables-json=y
@@ -250,6 +258,9 @@ CONFIG_PACKAGE_shadow-userdel=y
 CONFIG_PACKAGE_shadow-usermod=y
 CONFIG_PACKAGE_shadow-utils=y
 CONFIG_PACKAGE_shadow-vipw=y
+CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
+CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
+CONFIG_PACKAGE_sing-box=y
 CONFIG_PACKAGE_smartd=y
 CONFIG_PACKAGE_smartdns=y
 CONFIG_PACKAGE_snmpd=y
@@ -275,6 +286,12 @@ CONFIG_PACKAGE_xz=y
 CONFIG_PACKAGE_xz-utils=y
 # CONFIG_PACKAGE_zerotier is not set
 CONFIG_QCOW2_IMAGES=y
+CONFIG_SING_BOX_WITH_CLASH_API=y
+CONFIG_SING_BOX_WITH_DHCP=y
+CONFIG_SING_BOX_WITH_ECH=y
+CONFIG_SING_BOX_WITH_QUIC=y
+CONFIG_SING_BOX_WITH_UTLS=y
+CONFIG_SING_BOX_WITH_WIREGUARD=y
 CONFIG_SQLITE3_COLUMN_METADATA=y
 CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
 CONFIG_SQLITE3_FTS3=y
